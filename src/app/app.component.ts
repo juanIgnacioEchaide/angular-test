@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'angular-test';
+  mostrar = true;
+
+  users = [
+    { id: 1, name: 'Juan' },
+    { id: 2, name: 'Ana' },
+    { id: 3, name: 'Luis' }
+  ];
+
+  setShow() {
+    this.mostrar = !this.mostrar;
+  }
 }
