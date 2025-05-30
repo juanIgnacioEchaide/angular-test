@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
+import { ListComponent } from "./features/list/components/users-list/list.component";
+import { UserDetailComponent } from './features/list/components/user-detail/user-detail.component';
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ListComponent, UserDetailComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
