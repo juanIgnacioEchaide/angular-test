@@ -7,10 +7,9 @@ import { UserDetailComponent } from './features/list/components/user-detail/user
 
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, ListComponent, UserDetailComponent],
-  templateUrl: './app.component.html',
+    selector: 'app-root',
+    imports: [CommonModule, ListComponent, UserDetailComponent],
+    templateUrl: './app.component.html'
 })
 export class AppComponent {
   mostrar = true;
