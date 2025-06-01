@@ -1,12 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-user-detail',
-    imports: [],
-    templateUrl: './user-detail.component.html',
-    styleUrl: './user-detail.component.scss'
+  standalone: true,
+  selector: 'app-user-detail',
+  imports: [],
+  templateUrl: './user-detail.component.html',
+  styleUrl: './user-detail.component.scss'
 })
 export class UserDetailComponent {
-  @Input() user: any;
-  @Input() index!: number;
+  userId = input<number>(0)
+  index = input<number>(0)
+  userName = input<string>('')
 }

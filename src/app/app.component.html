@@ -1,8 +1,5 @@
 <app-list [itemTemplate]="userTemplate" />
 
 <ng-template #userTemplate let-user let-i="index">
-  <p><strong>Usuario {{ i + 1 }}</strong></p>
-  <p>ID: {{ user.id }}</p>
-  <p>Nombre: {{ user.name }}</p>
-  <hr />
+  <app-user-detail [index]="i" [userId]="user.id" [userName]="user.name" />
 </ng-template>

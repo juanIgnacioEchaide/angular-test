@@ -7,8 +7,8 @@ import { usersFeature } from './features/list/store/reducer/users.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideStore(),
+    provideStore( ),
     provideState(usersFeature),
-    provideEffects(UsersEffects),
+    provideEffects([UsersEffects]),
   ],
 };

@@ -11,6 +11,6 @@ export class UsersService {
       { id: 3, name: 'Lucía' },
     ];
     // Simula un delay como si fuera una llamada HTTP real
-    return of(mockUsers).pipe(delay(1000));
+    return of(mockUsers).pipe(delay(3000));
   }
 }
