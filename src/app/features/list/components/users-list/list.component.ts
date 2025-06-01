@@ -1,13 +1,20 @@
+import { Component, Input, TemplateRef, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component, Input, TemplateRef } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { selectAllUsers } from '../../store/selectors/users.selectors';
+import { User } from '../../models/user.model';
 
 @Component({
-    selector: 'app-list',
-    imports: [CommonModule],
-    templateUrl: './list.component.html',
-    styleUrl: './list.component.scss'
+  selector: 'app-list',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './list.component.html',
+  styleUrl: './list.component.scss',
 })
 export class ListComponent {
-  @Input() items: any[] = [];
   @Input() itemTemplate!: TemplateRef<any>;
+
+  private store = inject(Store);
+  users = toSignal(this.store.select(selectAllUsers));
 }
