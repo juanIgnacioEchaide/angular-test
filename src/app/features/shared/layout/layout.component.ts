@@ -1,17 +1,20 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, computed } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+import { DrawerComponent } from '../drawer/components/drawer.component';
+import { DrawerService } from '../drawer/service/drawer.service';
+import { routes } from '../../../app.routes';
+
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, DrawerComponent],
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
-  isDrawerOpen = signal(false);
-
-  toggleDrawer = () => this.isDrawerOpen.update(v => !v);
-  closeDrawer = () => this.isDrawerOpen.set(false);
+  constructor(public drawer: DrawerService) { }
+  routes = computed(() => routes.map(r => ({ name: r.path, route: `/${r.path}` })))
 }

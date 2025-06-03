@@ -1,0 +1,13 @@
+@if (isOpen()) {
+<div class="backdrop" (click)="drawer.close()"></div>
+}
+
+<div class="drawer" [class.open]="isOpen()">
+  <button class="close-btn" (click)="drawer.close()">✖</button>
+  <ng-content>
+    <div class="routes-container">
+      <a routerLink="/users">Users</a>
+      <a routerLink="/machines">Machine</a>
+    </div>
+  </ng-content>
+</div>

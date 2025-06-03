@@ -1,26 +1,26 @@
 .drawer {
   position: fixed;
   top: 0;
-  right: -300px;
-  width: 300px;
+  left: -43vw;
+  width: 33vw;
   height: 100%;
   background: white;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
-  transition: right 0.3s ease-in-out;
-  padding: 1rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
   z-index: 1000;
+  padding: 1rem;
 
   &.open {
-    right: 0;
+    left: 0;
   }
 
   .close-btn {
     position: absolute;
     top: 10px;
-    left: 10px;
-    border: none;
+    right: 10px;
+    font-size: 1.75rem;
     background: transparent;
-    font-size: 1.5rem;
+    border: none;
     cursor: pointer;
   }
 }
@@ -29,8 +29,14 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
   background: rgba(0, 0, 0, 0.4);
   z-index: 999;
+}
+
+.routes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

@@ -1,5 +1,16 @@
-.layout, .main, main {
+.layout,
+.main,
+main {
   display: block;
   height: 100%;
   width: 100%;
+}
+
+.toggle-btn {
+  top: 10px;
+  right: 10px;
+  font-size: 1.75rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }

@@ -1,14 +1,13 @@
-<div>
-  <nav class="drawer" [class.open]="isDrawerOpen()">
-  </nav>
+<app-drawer>
 
-  <div>
-    <header>
-      <button (click)="toggleDrawer()">☰</button>
-    </header>
+</app-drawer>
 
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-  </div>
+<div class="layout">
+  <header>
+    <button class="toggle-btn" (click)="drawer.toggle()">☰</button>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
 </div>

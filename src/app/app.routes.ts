@@ -14,6 +14,13 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'machines',
+        loadComponent: () =>
+          import('../app/features/list/pages/users-list-page/users-list-page.component').then(
+            m => m.UsersListPageComponent
+          ),
+      },
+      {
         path: '',
         redirectTo: 'users',
         pathMatch: 'full',
