@@ -1,4 +1,4 @@
-import { Component, input, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -8,7 +8,7 @@ import { Component, input, Input } from '@angular/core';
   styleUrl: './user-detail.component.scss'
 })
 export class UserDetailComponent {
-  userId = input<number>(0)
-  index = input<number>(0)
-  userName = input<string>('')
+  @Input() userId: number = 0;
+  @Input() index: number = 0;
+  @Input() userName: string = '';
 }

@@ -1,7 +1,12 @@
-<ng-container *ngIf="users() as items">
-  @for (user of items; track user.id) {
-    <ng-container
-      *ngTemplateOutlet="itemTemplate; context: { $implicit: user, index: user.id }"
-    ></ng-container>
-  }
-</ng-container>
+@if(users()){
+  <ng-container>
+    @for (user of users(); track user.id) {
+      <ng-container
+        *ngTemplateOutlet="
+          itemTemplate;
+          context: { $implicit: user, index: user.id }
+        "
+      ></ng-container>
+    }
+  </ng-container>
+}

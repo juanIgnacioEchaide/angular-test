@@ -1,1 +1,5 @@
-<p>users-list-page works!</p>
+<ng-template #userTemplate let-user let-i="index">
+  <app-user-detail [userId]="user.id" [userName]="user.name" [index]="i"/>
+</ng-template>
+
+<app-list [itemTemplate]="userTemplate" />
