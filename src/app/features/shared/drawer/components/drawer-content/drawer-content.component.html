@@ -1,11 +1,10 @@
-    <div class="routes-container">
-      
-      <a routerLink="/users" [ngClass]="{ selected: isSelected('/users') }"
-        >Users</a
-      >
-      <a
-        routerLink="/machines"
-        [ngClass]="{ selected: isSelected('/machines') }"
-        >Machine</a
-      >
-    </div>
+<div class="routes-container">
+  @for (route of routes; track $index) {
+    <a
+      (click)="navigateTo(route.path)"
+      [ngClass]="{ selected: isSelect('/' + route.path) }"
+    >
+      {{ route.title }}
+    </a>
+  }
+</div>

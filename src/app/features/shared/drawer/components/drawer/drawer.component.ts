@@ -15,13 +15,5 @@ import { DrawerContentComponent } from "../drawer-content/drawer-content.compone
 export class DrawerComponent {
   constructor(public drawer: DrawerService) { }
   
-  routes = computed(() => [
-    { name: 'Home', route: '/home' },
-    { name: 'About', route: '/about' },
-    { name: 'Contact', route: '/contact' }
-  ]);
-
   isOpen = computed(() => this.drawer.isOpen());
-
-
 }

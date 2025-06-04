@@ -4,6 +4,6 @@
 <div class="drawer" [class.open]="isOpen()">
   <button class="close-btn" (click)="drawer.close()">✖</button>
   <ng-content>
-    <app-drawer-content />
+    <app-drawer-content (onCloseDrawer)="drawer.close()" />
   </ng-content>
 </div>

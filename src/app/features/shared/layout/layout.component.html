@@ -3,6 +3,7 @@
   <app-drawer />
   <header>
     <button class="toggle-btn" (click)="drawer.toggle()">☰</button>
+    <p class="current">{{currentSection()}}</p>
   </header>
   <main>
     <router-outlet></router-outlet>
