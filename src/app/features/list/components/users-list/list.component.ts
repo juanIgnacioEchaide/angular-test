@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { selectAllUsers, selectUsersLoading } from '../../store/selectors/users.selectors';
+import { UserSkeletonComponent } from "../user-skeleton/user-skeleton.component";
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, UserSkeletonComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss',
 })

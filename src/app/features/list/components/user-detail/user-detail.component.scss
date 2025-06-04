@@ -4,9 +4,10 @@
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
   border-radius: 8px;
-  width: 95%;
+  width: 85%;
   justify-content: center;
   margin: 20px;
+  margin-left: 5%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-left: 5px solid #007acc;
 
@@ -19,13 +20,16 @@
 }
 
 p {
+
   margin: 0.25rem 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
   &:first-child {
+      margin-left: 50px;
     font-weight: 600;
     color: #2a2a2a;
     margin-bottom: 0.5rem;
+
   }
 
   &:nth-child(2),

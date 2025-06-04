@@ -1,12 +1,14 @@
-@if(users()){
-  <ng-container>
-    @for (user of users(); track user.id) {
-      <ng-container
-        *ngTemplateOutlet="
-          itemTemplate;
-          context: { $implicit: user, index: user.id }
-        "
-      ></ng-container>
-    }
-  </ng-container>
+@if(users()?.length){
+<ng-container>
+  @for (user of users(); track user.id) {
+  <ng-container
+    *ngTemplateOutlet="
+      itemTemplate;
+      context: { $implicit: user, index: user.id }
+    "
+  ></ng-container>
+  }
+</ng-container>
+} @else {
+  <app-user-skeleton />
 }
