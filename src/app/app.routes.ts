@@ -9,15 +9,15 @@ export const routes: Routes = [
       {
         path: 'users',
         loadComponent: () =>
-          import('../app/features/list/pages/users-list-page/users-list-page.component').then(
+          import('./features/list/pages/users-list-page/users-list-page.component').then(
             m => m.UsersListPageComponent
           ),
       },
       {
         path: 'machines',
         loadComponent: () =>
-          import('../app/features/list/pages/users-list-page/users-list-page.component').then(
-            m => m.UsersListPageComponent
+          import('./features/list/pages/machines-list-page/machines-list-page.component').then(
+            m => m.MachinesListPageComponent
           ),
       },
       {

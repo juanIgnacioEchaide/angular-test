@@ -1,0 +1,11 @@
+    <div class="routes-container">
+      
+      <a routerLink="/users" [ngClass]="{ selected: isSelected('/users') }"
+        >Users</a
+      >
+      <a
+        routerLink="/machines"
+        [ngClass]="{ selected: isSelected('/machines') }"
+        >Machine</a
+      >
+    </div>

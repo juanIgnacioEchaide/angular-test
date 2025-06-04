@@ -1,0 +1,19 @@
+.routes-container {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  margin-left: 20%;
+  justify-content: space-evenly;
+}
+
+a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(43, 43, 43);
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+
+  &.selected {
+    font-weight: bold;
+  }
+}

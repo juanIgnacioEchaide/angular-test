@@ -2,7 +2,7 @@ import { Component, computed } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { DrawerComponent } from '../drawer/components/drawer.component';
+import { DrawerComponent } from '../drawer/components/drawer/drawer.component';
 import { DrawerService } from '../drawer/service/drawer.service';
 import { routes } from '../../../app.routes';
 
