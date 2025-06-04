@@ -21,9 +21,13 @@ export class LayoutComponent {
 
   private urlSignal = signal(this.router.url);
 
-  currentSection = computed(() => this.urlSignal().split('/')[1]);
+  capitalize(word: string): string {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }
 
-  routes = computed(() => routes.map(r => ({ name: r.path, route: `/${r.path}` })));
+  currentSection = computed(() => this.capitalize(this.urlSignal().split('/')[1]));
+
+  routes = computed(() => routes.map(r => ({ name: this.capitalize(r.path || ''), route: `/${r.path}` })));
 
   constructor() {
     this.router.events
