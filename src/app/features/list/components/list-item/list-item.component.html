@@ -1,0 +1,6 @@
+<div class="list-item" [style.border-left-color]="borderColor()">
+  <p><strong>{{ title() }} {{ index() }}</strong></p>
+
+  <p>{{ firstLabel() }}: {{ firstValue() }}</p>
+  <p *ngIf="secondLabel()">{{ secondLabel() }}: {{ secondValue() }}</p>
+</div>

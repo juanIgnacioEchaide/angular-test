@@ -1,29 +1,32 @@
 .skeleton-container {
-  margin-top: 2.5%;
+  top: -3;
 }
+
 .skeleton-card {
   display: flex;
   flex-direction: column;
   background-color: #f3f3f3;
-  width: 85%;
-  height: 9vh;
+  width: 88%;
+  height: 10vh;
   border-radius: 8px;
   animation: pulse 1.5s infinite ease-in-out;
-  padding: 10px;
-  margin-left: 4%;
-  margin-bottom: 1%;
+  padding: 5px;
+  margin-left: 5%;
+  margin-bottom: 0.5%;
 }
 
 .skeleton-title {
   width: 20%;
-  height: 1.2rem;
+  height: 1.5rem;
   margin-left: 3%;
   background-color: #ddd;
   margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
   border-radius: 4px;
 }
 
 .skeleton-line {
+  width: 30%;
   height: 1.5rem;
   margin-left: 1%;
   background-color: #e0e0e0;
@@ -35,7 +38,7 @@
   }
 
   &:not(.short) {
-    width: 70%;
+    width: 40%;
   }
 }
 

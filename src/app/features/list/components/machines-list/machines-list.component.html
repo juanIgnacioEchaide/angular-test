@@ -1,0 +1,7 @@
+<ng-template #itemTemplate let-machine let-i="index">
+  <app-machine-detail />
+</ng-template>
+
+@for (machine of machines; track $index) {
+  <ng-container *ngTemplateOutlet="itemTemplate; context: { $implicit: machine, index: $index }" />
+}

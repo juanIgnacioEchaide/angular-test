@@ -1,3 +1,8 @@
-  <p><strong>Usuario {{ index }}</strong></p>
-  <p>ID: {{ userId }}</p>
-  <p>Nombre: {{ userName }}</p>
+<app-list-item
+  [index]="index"
+  title="Usuario"
+  firstLabel="ID"
+  [firstValue]="userId"
+  secondLabel="Nombre"
+  [secondValue]="userName">
+</app-list-item>

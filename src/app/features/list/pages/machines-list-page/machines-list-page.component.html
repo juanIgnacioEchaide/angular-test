@@ -1,1 +1,5 @@
-<p>machines-list-page works!</p>
+<ng-template #userTemplate let-machine let-i="index">
+  <app-machine-detail [idx]="i" [machineId]="machine.id" [machineModel]="machine.model" />
+</ng-template>
+
+<app-list [itemTemplate]="userTemplate" />

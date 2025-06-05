@@ -12,6 +12,8 @@ header {
 }
 
 .toggle-btn {
+    display: flex;
+  align-items: center;
   top: 10px;
   right: 10px;
   font-size: 1.75rem;
@@ -21,6 +23,8 @@ header {
 }
 
 .current {
+  display: flex;
+  align-items: center;
   margin-left: 15% ;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 28px;
