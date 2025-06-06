@@ -1,22 +1,21 @@
 import { CommonModule } from '@angular/common';
-import { Component, TemplateRef, ViewChild } from '@angular/core';
-import { Machine } from '../../models/machine.model';
-import { MachineDetailComponent } from "../machine-detail/machine-detail.component";
-
+import { Component, Input, TemplateRef, signal, ChangeDetectionStrategy } from '@angular/core';
+import { UserSkeletonComponent } from '../user-skeleton/user-skeleton.component';
 
 @Component({
   selector: 'app-machines-list',
   standalone: true,
-  imports: [CommonModule, MachineDetailComponent],
+  imports: [CommonModule, UserSkeletonComponent],
   templateUrl: './machines-list.component.html',
   styleUrl: './machines-list.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MachinesListComponent {
-  machines: Machine[] = [
+  @Input() itemTemplate!: TemplateRef<any>;
+
+  machines = signal([
     { id: 1, model: 'Dell OptiPlex 7090' },
     { id: 2, model: 'HP EliteDesk 800 G6' },
     { id: 3, model: 'Lenovo ThinkCentre M90t' }
-  ];
-
-  @ViewChild('itemTemplate', { static: true }) itemTemplate!: TemplateRef<any>;
+  ]);
 }

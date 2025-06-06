@@ -1,5 +1,5 @@
-<ng-template #userTemplate let-machine let-i="index">
+<ng-template #machineTemplate let-machine let-i="index">
   <app-machine-detail [idx]="i" [machineId]="machine.id" [machineModel]="machine.model" />
 </ng-template>
 
-<app-list [itemTemplate]="userTemplate" />
+<app-machines-list [itemTemplate]="machineTemplate" />

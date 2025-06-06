@@ -1,7 +1,11 @@
-<ng-template #itemTemplate let-machine let-i="index">
-  <app-machine-detail />
-</ng-template>
-
-@for (machine of machines; track $index) {
-  <ng-container *ngTemplateOutlet="itemTemplate; context: { $implicit: machine, index: $index }" />
+@if(machines().length > 0){
+  <ng-container>
+    @for (machine of machines(); track machine.id) {
+      <ng-container
+        *ngTemplateOutlet="itemTemplate; context: { $implicit: machine, index: $index }"
+      ></ng-container>
+    }
+  </ng-container>
+} @else {
+  <app-user-skeleton />
 }
