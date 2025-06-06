@@ -1,27 +1,75 @@
-# AngularTest
+# 🧠 Angular Test – Arquitectura Escalable, DRY y con NGRX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+Este proyecto es una demo técnica construida con Angular, enfocada en **principios de arquitectura limpia, reutilización de componentes, manejo de estado con NGRX** y buenas prácticas de diseño. Está pensado como ejemplo realista de cómo escalar una aplicación **modular, mantenible y desacoplada**.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 ¿Qué muestra este repo?
 
-## Code scaffolding
+Una implementación completa de una **feature de usuarios** con:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- 🧩 **Componentes reutilizables** siguiendo _Atomic Design_
+- ♻️ Templates reutilizados con `@ViewChild` y estructuras DRY
+- 🧠 **Manejo de estado con NGRX**: `store`, `reducer`, `effects` y `facade`
+- 📦 **Principios SOLID** aplicados en el diseño
+- 💡 **Lazy loading** de rutas por feature
+- ⏳ Indicadores de carga con _skeleton loaders_ y renderizado optimizado
+- 🔌 Separación estricta de lógica de presentación y de negocio
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🧩 Reutilización y DRY
 
-## Running unit tests
+Uno de los ejes del proyecto es evitar la repetición innecesaria. Algunas estrategias:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Se abstraen componentes visuales en templates reutilizables.
+- Se accede dinámicamente a partes del template usando `@ViewChild`, componiendo estructuras flexibles y reusables.
+- Se utilizan wrappers para mostrar loaders o placeholders sin duplicar lógica.
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Arquitectura:
 
-## Further help
+src/
+└── app/
+    ├── features/
+    │   └── list/
+    │       ├── components/
+    │       │   ├── list-item/
+    │       │   ├── machine-detail/
+    │       │   ├── machines-list/
+    │       │   ├── user-detail/
+    │       │   ├── user-skeleton/
+    │       │   └── users-list/
+    │       ├── models/
+    │       │   ├── machine.model.ts
+    │       │   └── user.model.ts
+    │       ├── pages/
+    │       │   ├── machines-list-page/
+    │       │   └── users-list-page/
+    │       ├── services/
+    │       │   └── users.service.ts
+    │       └── store/
+    │           ├── actions/
+    │           ├── effects/
+    │           ├── reducer/
+    │           ├── selectors/
+    │           └── users.facade.ts
+    └── shared/
+        └── drawer/
+            ├── components/
+            ├── service/
+            └── layout/
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+### Ejemplo del uso del template
+
+```ts
+@ViewChild('userTemplate') userTemplate: TemplateRef<any>;
+
+![image](https://github.com/user-attachments/assets/dab584d0-afcc-41d4-ab98-69ee2693006d)
+
+![image](https://github.com/user-attachments/assets/53a32d7c-c63e-4adf-a1ca-e49b944868c9)
+
+![image](https://github.com/user-attachments/assets/b4a36850-dad4-4021-8100-071ff48dfba9)
+
