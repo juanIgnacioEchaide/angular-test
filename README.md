@@ -30,7 +30,7 @@ Uno de los ejes del proyecto es evitar la repetición innecesaria. Algunas estra
 
 ### Arquitectura:
 
-src/
+`src/
 └── app/
     ├── features/
     │   └── list/
@@ -59,13 +59,14 @@ src/
         └── drawer/
             ├── components/
             ├── service/
-            └── layout/
+            └── layout/`
 
 
 ### Ejemplo del uso del template
 
 ```ts
 @ViewChild('userTemplate') userTemplate: TemplateRef<any>;
+``
 
 ![image](https://github.com/user-attachments/assets/dab584d0-afcc-41d4-ab98-69ee2693006d)
 
