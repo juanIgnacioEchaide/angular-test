@@ -28,9 +28,10 @@ Uno de los ejes del proyecto es evitar la repetición innecesaria. Algunas estra
 
 ---
 
-### Arquitectura:
+## 🗂️ Estructura del proyecto
 
-`src/
+```plaintext
+src/
 └── app/
     ├── features/
     │   └── list/
@@ -59,18 +60,4 @@ Uno de los ejes del proyecto es evitar la repetición innecesaria. Algunas estra
         └── drawer/
             ├── components/
             ├── service/
-            └── layout/`
-
-
-### Ejemplo del uso del template
-
-```ts
-@ViewChild('userTemplate') userTemplate: TemplateRef<any>;
-``
-
-![image](https://github.com/user-attachments/assets/dab584d0-afcc-41d4-ab98-69ee2693006d)
-
-![image](https://github.com/user-attachments/assets/53a32d7c-c63e-4adf-a1ca-e49b944868c9)
-
-![image](https://github.com/user-attachments/assets/b4a36850-dad4-4021-8100-071ff48dfba9)
-
+            └── layout/
