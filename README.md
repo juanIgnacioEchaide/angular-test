@@ -25,6 +25,11 @@ Uno de los ejes del proyecto es evitar la repetición innecesaria. Algunas estra
 - Se abstraen componentes visuales en templates reutilizables.
 - Se accede dinámicamente a partes del template usando `@ViewChild`, componiendo estructuras flexibles y reusables.
 - Se utilizan wrappers para mostrar loaders o placeholders sin duplicar lógica.
+  
+![image](https://github.com/user-attachments/assets/7074bf71-bb5b-4271-bd2c-004261e2b4bd)
+![image](https://github.com/user-attachments/assets/702446f0-ee9d-42c3-b2a8-992f692d22ce)
+![image](https://github.com/user-attachments/assets/d6a2fc26-812d-411a-b6e6-1dd361f264d4)
+![image](https://github.com/user-attachments/assets/fba6ccd5-727d-439d-9777-3bf89bce647d)
 
 ---
 
